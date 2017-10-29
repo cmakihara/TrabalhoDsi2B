@@ -1,0 +1,62 @@
+<h1>Adicionar</h1>
+<tr>
+  <td>
+    Nome
+    <input [(ngModel)]="nome">
+  </td>
+  <td>
+    telefone
+    <input [(ngModel)]="telefone">
+  </td>
+  <td>
+    endereco
+    <input [(ngModel)]="endereco">
+  </td>
+  <td>
+    email
+    <input [(ngModel)]="email">
+  </td>
+  <td>
+    celular
+    <input [(ngModel)]="celular">
+  </td>
+</tr>
+<!--<p>Adicionando {{nome}}!</p>-->
+
+<button (click)="salvarAgenda()">Salvar</button>
+
+
+
+<h1>Lista</h1>
+
+<table>
+  <tr *ngFor="let agenda of agendas">
+    <td>
+      {{agenda.id}}
+    </td>
+    <td>
+      {{agenda.nome}}
+    </td>
+    <td>
+      {{agenda.telefone}}
+    </td>
+    <td>
+      {{agenda.endereco}}
+    </td>
+    <td>
+      {{agenda.email}}
+    </td>
+    <td>
+      {{agenda.celular}}
+    </td>
+    <td>
+      <button (click)="apagarAgenda(agenda.id)">Apagar</button>
+    </td>
+  </tr>
+</table>
+
+
+<h1>Json</h1>
+<pre>
+  {{agendas | json}}
+</pre>
