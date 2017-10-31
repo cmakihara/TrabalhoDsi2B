@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AgendaDService } from './agenda.service';
-import { Agenda } from './agenda';
+import { AgendaService } from '../agenda/agenda.service';
+import { Agenda } from '../agenda/agenda';
 
 
 @Component({
@@ -15,10 +15,14 @@ export class ApagarComponent implements OnInit {
    public email = '';
    public celular = '';
 
-   constructor(private agendaService: AgendaDService) { }
+   constructor(private agendaService: AgendaService) { }
 
    public ngOnInit() {
      this.carregaTodos();
+   }
+
+   sucess(){
+     alert("Cadastro deletado");
    }
 
    public salvarAgenda(): void {

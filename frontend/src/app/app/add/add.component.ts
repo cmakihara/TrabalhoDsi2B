@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AgendaService } from './agenda.service';
-import { Agenda } from './agenda';
+import { AgendaService } from '../agenda/agenda.service';
+import { Agenda } from '../agenda/agenda';
 
 @Component({
   selector: 'app-add',
@@ -19,6 +19,11 @@ export class AddComponent implements OnInit {
    public ngOnInit() {
 
    }
+   sucess(){
+     alert("Cadastro salvo");
+
+   }
+
 
    public salvarAgenda(): void {
      console.log('oi');

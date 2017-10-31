@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AgendaLService } from './agenda.service';
-import { Agenda } from './agenda';
+import { AgendaService } from '../agenda/agenda.service';
+import { Agenda } from '../agenda/agenda';
 
 @Component({
   selector: 'app-listar',
@@ -14,7 +14,7 @@ export class ListarComponent implements OnInit {
    public email = '';
    public celular = '';
 
-   constructor(private agendaService: AgendaLService) { }
+   constructor(private agendaService: AgendaService) { }
 
    public ngOnInit() {
      this.carregaTodos();
